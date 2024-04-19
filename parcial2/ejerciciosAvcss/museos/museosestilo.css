@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(65, 156, 156);
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 40px;
+}
+#hmenu{
+    display: flex;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+    color: rgb(10, 97, 97);
+}
+#nav{
+    text-align: center;
+}
+p a{
+    color: orangered;
+    text-align: center;
+}
+section img{
+    height: 150px;
+    width: auto;
+}
+.par p,h2{
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.impar p,h2{
+    margin-left: 10px;
+    margin-right: 30px;
+}
+.marcoi{
+    float: left;
+    border: 10px solid orangered;
+    padding-right: 0px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+.impar{
+    background-color: #f2f2f2;
+    border: 10px solid orangered;
+    padding: 10px;
+    height: 230px;
+    margin-top: 30px;
+}
+.impar img{
+    float: left;
+    border: 10px solid orange;
+}
+.marcod{
+    float: right;
+    border: 10px solid orange;
+    padding-right: 0px;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.par{
+    background-color: #f2f2f2;
+    border: 10px solid orange;
+    padding: 10px;
+    height: 230px;
+    margin-top: 30px;
+}
+.par img{
+    float: right;
+    border: 10px solid orangered;
+}

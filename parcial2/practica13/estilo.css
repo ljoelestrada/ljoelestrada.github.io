@@ -1,0 +1,49 @@
+#rmenu{
+    margin-left: 47%;
+}
+body{
+    background-color: #572364;
+    background-image: url(../../imagenes/fondo.png);
+}
+table{
+    margin-left: 38%;
+    margin-top: 40px;
+    background-color: #f2f2f2;
+}
+table, th, td{
+    border: 2px solid #333;
+    font-size: 30px;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+.tteal{
+    color: #008080;
+}
+.tred{
+    color: red;
+}
+.tblue{
+    color: blue;
+}
+.torange{
+    color: orange;
+}
+.tpurple{
+    color: purple;
+}
+.tolive{
+    color: olive;
+}
+.tfuchsia{
+    color: fuchsia;
+}
+.tgreen{
+    color: green;
+}
