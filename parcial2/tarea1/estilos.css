@@ -1,0 +1,91 @@
+body{
+    font-family: 'Amatic SC';
+    background-image: url(media/fondo.png);
+    background-size: cover;
+    margin: 0;
+}
+#hmenu{
+    display: flex;
+    justify-content: center;
+}
+#burbuja{
+    display: flex;
+    justify-content: center;
+}
+#titulo{
+    text-align: center;
+    background-color: #f2f2f2;
+    padding-top: 30px;
+    width: 500px;
+    height: 80px;
+    border-radius: 55%;
+}
+.rotulos{
+    background-color: #7c6054;
+    color: #f2f2f2;
+    font-size: 40px;
+    height: 80px;
+    padding-top: 25px;
+    padding-left: 35px;
+    margin: 2% 5% 0% 5%;
+}
+.parrafo{
+    background-color: #f2f2f2;
+    text-align: justify;
+    color: #000;
+    font-size: 25px;
+    padding-top: 25px;
+    padding: 2% 2% 2% 2%;
+    margin: 2% 5% 0% 5%;
+}
+#menu{
+    background-color: #7c6054;
+    color: #f2f2f2;
+    display: flex;
+    padding-left: 30%;
+    font-size: 30px;
+}
+.submenu{
+    margin-left: 2%;
+}
+a{
+    color: #f2f2f2;
+}
+.regreso{
+    text-align: right;
+    background-color: #7c6054;
+    color: #f2f2f2;
+    width: fit-content;
+    padding: 15px;
+}
+#img1{
+    float: right;
+    margin-left: 40px;
+    margin-top: 20px;
+    height: 570px;
+    width: 630px;
+}
+#img2{
+    float: left;
+    margin-right: 40px;
+    margin-top: 20px;
+    height: 420px;
+    width: 430px;
+}
+#img3{
+    float: left;
+    margin-right: 40px;
+    margin-top: 10px;
+    height: 370px;
+    width: 430px;
+}
+footer{
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #7c6054;
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 30px;
+    height: 170px;
+}

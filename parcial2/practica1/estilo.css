@@ -1,0 +1,33 @@
+h1{
+    color: purple;
+    font-family: Georgia;
+    margin-top: 50px;
+}
+h2{
+    color: blue;
+    font-family: 'Times New Roman';
+    font-size: 40px;
+}
+p, h3{
+    color: #f2f2f2;
+    font-family: Verdana;
+    font-size: 13;
+}
+body{
+    background-color: #454545;
+    background-image: url(media/fondo.jpg);
+    text-align: center;
+}
+section img{
+    height: 190px;
+    width: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#song{
+    margin-top: 20px;
+}
+#letra{
+    margin-top: 40px;
+    margin-bottom: 60px;
+}

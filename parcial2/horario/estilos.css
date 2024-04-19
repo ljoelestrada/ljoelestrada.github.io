@@ -1,0 +1,52 @@
+body{
+    text-align: center;
+    background-color: #333c87;
+    color: #f2f2f2;
+    background-image: url(fondo.png);
+    background-size: cover;
+}
+table, td, th{
+    background-color: #eed09d;
+    border: 1px solid #555;
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+th{
+    color: #333;
+}
+h1{
+    margin-top: 80px;
+}
+.progra{
+    background-color: #ff8000;
+    color: #000;
+}
+.fisica{
+    background-color: #0061a9;
+    color: #fff;
+}
+.mate{
+    background-color: #e6191b;
+    color: #f2f2f2;
+}
+.web{
+    background-color: #4f5382;
+    color: #f2f2f2;
+}
+.nucleo{
+    background-color: #679f5a;
+    color: #000;
+}
+.estadistica{
+    background-color: #a18262;
+    color: #000;
+}
+#labof{
+    background-color: #001a57;
+    color: #f2f2f2;
+}
+#labop{
+    background-color: #ff4000;
+    color: #f2f2f2;
+}

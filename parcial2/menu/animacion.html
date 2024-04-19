@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transición de imagen con CSS</title>
+    <style>
+        /* Estilos básicos para la imagen */
+        body{
+            margin: 0;
+            background-color: #1d334a;
+            color: black;
+            font-family: verdana;
+        }
+        #hmenu{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-left: -45px;
+        }
+        #menus{
+            display: flex;
+        }
+        #encabezado{
+            display: flex;
+            background-color: orangered;
+            color: #f2f2f2;
+            height: 90px;
+            width: 100%;
+            border: 1px solid #f2f2f2;
+            align-items: center;
+        }
+        #nav img{
+            margin-left: 15px;
+        }
+        h1{
+            margin-left: 150px;
+        }
+        #nav{
+            background-color: #f2f2f2;
+            width: 220px;
+            height: 800px;
+            border: 1px solid #f2f2f2;
+        }
+        #botones{
+            margin-left: 15px;
+            margin-top: 20px;
+        }
+        .boton {
+            width: 150px; /* Ancho inicial */
+            text-align: center;
+            color: #f2f2f2;
+            background-color: orangered;
+            border: 1px solid #f2f2f2;
+            margin: 2px;
+            transition: width 0.5s; /* Transición suave */
+        }
+        .boton a{
+            color:#f2f2f2
+        }
+
+        /* Cambio de tamaño al hacer hover */
+        .boton:hover{
+            width: 200px; /* Ancho al hacer hover */
+            background-color: #1d334a;
+            color: #f2f2f2;
+            border: 3px solid orange;
+        }
+        .boton:hover a{
+            color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="menus">
+
+        <div id="nav">
+            <img src="logo.png" width="150px">
+            <div id="botones">
+                <!-- Imagen con clase "imagen" -->
+                <div class="boton">
+                    <p><a href="https://www.upslp.edu.mx/upslp/?page_id=271">Nosotros</a></p>
+                </div>
+                <div class="boton">
+                    <p><a href="https://www.upslp.edu.mx/upslp/?page_id=244">Aspirantes</a></p>
+                </div>
+                <div class="boton">
+                    <p><a href="https://www.upslp.edu.mx/upslp/?page_id=209">Estudiantes</a></p>
+                </div>
+                <div class="boton">
+                    <p><a href="https://www.upslp.edu.mx/upslp/?page_id=231">Docentes</a></p>
+                </div>
+                <div class="boton">
+                    <p><a href="https://www.upslp.edu.mx/upslp/?page_id=241">Egresados</a></p>
+                </div>
+                <div class="boton">
+                    <p><a href="mailto:185019@upslp.edu.mx">Contacto</a></p>
+                </div>
+                <div id="hmenu"><a href="../../index.html" ><img src="../../imagenes/home.png" height="60px" width="60px"></a></div>
+            </div>
+        </div>
+
+        <div id="encabezado">
+            <h1>Transición de imagen con CSS</h1>
+        </div>
+
+    </div>
+    
+</body>
+</html>
