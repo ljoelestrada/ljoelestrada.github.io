@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Cabin+Sketch);
+
+/* RESPONSIVO */
+.contenido{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media only screen and (max-width: 1900px) {
+    .contenido{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .contenido{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+  
+@media only screen and (max-width: 850px) {
+    .contenido{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* LOS BASICOS */
+body{
+    margin: 0;
+    background-color: #572364;
+    background-image: url(imagenes/fondo.png);
+    color: #f2f2f2;
+}
+#cuerpo{
+    margin-bottom: 20px;
+}
+header{
+    height: 80px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer{
+    height: 130px;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    /* Header */
+h1{
+    margin-left: 10%;
+}
+header p{ 
+    margin-right: 5%;
+    font-size: 20px;
+}
+/* NAV */
+#nav{
+    background-color: #333;
+    float: left;
+    position: fixed;
+    width: auto;
+    height: auto;
+    padding: 8px;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.vinculo{
+    color: #f2f2f2;
+}
+.vinculo:visited{
+    color: #f2f2f2;
+}
+.vinculo:hover{
+    color: red;
+}
+    /* CONTENIDO */
+h2{
+    font-family: "Cabin Sketch";
+    font-size: 30px;
+}
+hr{
+    margin-bottom: 25px;
+    border: 1px solid #f2f2f2;
+}
+.parciales{
+    margin-left: 7%;
+    margin-right: 7%;
+}
+    /* LOS MARCOS */
+div.gallery {
+    margin: 5px 5px 25px 5px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    width: 380px;
+    font-family: Verdana;
+}    
+div.gallery:hover {
+    border: 4px solid #3ba3bc;
+    background-color: #ccc;
+    color: #333;
+}   
+div.gallery img {
+    width: 100%;
+    height: 80%;
+}   
+div.desc {
+    padding: 15px;
+    text-align: center;
+    height: 30px;
+}
+/* footer */
+.iconta{
+    height: 50px;
+    width: 50px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 5px;
+}
+#contacto{
+    display: flex;
+    justify-content: center;
+}
