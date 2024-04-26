@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graficas</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body{
+            background-color: #333;
+        }
+        div{
+            margin: 20px 20px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="myPlot1" style="width:100%;max-width:700px"></div>
+    <div id="myPlot2" style="width:100%;max-width:700px"></div>
+    <div id="myPlot3" style="width:100%;max-width:700px"></div>
+    <script>
+        const xArray = ["Matematicas I", "Fisica I", "Nucleo II", "Progra. Web I", "Progra. I","Proba y Estadis."];
+        const yArray1 = [10, 7.5, 9, 10, 10,10];
+        const data1 = [{
+                        x:xArray,
+                        y:yArray1,
+                        type:"bar",
+                        orientation:"v",
+                        marker: {color:"rgba(255,0,50,0.7)"}
+                    }];
+        const yArray2 = [9.5, 9.5, 8, 10, 9,10];
+        const data2 = [{
+                        x:xArray,
+                        y:yArray2,
+                        type:"bar",
+                        orientation:"v",
+                        marker: {color:"rgba(50,0,255,0.7)"}
+                    }];
+        const yArray3 = [
+                        Math.floor(Math.random() * (10-5))+5, 
+                        Math.floor(Math.random() * (10-5))+5, 
+                        Math.floor(Math.random() * (10-5))+5, 
+                        Math.floor(Math.random() * (10-5))+5, 
+                        Math.floor(Math.random() * (10-5))+5,
+                        Math.floor(Math.random() * (10-5))+5
+                        ];
+        const data3 = [{
+                        x:xArray,
+                        y:yArray3,
+                        type:"bar",
+                        orientation:"v",
+                        marker: {color:"rgba(50,255,255,0.7)"}
+                    }];
+        const layout1 = {title:"Rendimiento Parcial 1"};
+        const layout2 = {title:"Rendimiento Parcial 2"};
+        const layout3 = {title:"Predicción Parcial 3"};
+        Plotly.newPlot("myPlot1", data1, layout1);
+        Plotly.newPlot("myPlot2", data2, layout2);
+        Plotly.newPlot("myPlot3", data3, layout3);
+    </script>
+
+</body>
+
+</html>

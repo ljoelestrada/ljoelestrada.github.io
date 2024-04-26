@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<body>
+
+    <form id="funform" onsubmit="return trigo();">
+        <p>Donde comienza tu función? <input id="funin" name="ini" type="text" /></p>
+        <p>Donde finaliza tu función? <input id="funfin" name="fin" type="text" /></p>
+        <p>Qué función quieres usar?
+            <select id="cfun" name="ele"></p>
+                <option value="1">Seno</option>
+                <option value="2">Coseno</option>
+                <option value="3">Tangente</option>
+                <option value="4">Cotangente</option>
+            </select>
+
+        <p><input type="submit"/></p>
+    </form>
+    <div id="myPlot" style="width:100%;max-width:700px"></div>
+
+
+
+    <script>
+        function trigo(){
+            var ini= parseInt(document.forms[0].ini.value);
+            var fin= parseInt(document.forms[0].fin.value);
+            var fun= parseInt(document.forms[0].ele.value);
+            var z;
+
+            if(fun==1){
+                z = "Math.sin(x)";
+                }else if(fun==2){
+                    z = "Math.cos(x)";
+                }else if(fun==3){
+                    z = "Math.tan(x)";
+                }else if(fun==4){
+                    z = "Math.tanh(x)";
+                }
+            
+            let exp = z;
+
+            // Generate values
+            const xValues = [];
+            const yValues = [];
+
+            for (let x = ini; x <= fin; x += 0.1) {
+                xValues.push(x);
+                yValues.push(eval(exp));
+            }
+
+            // Display using Plotly
+            const data = [{x:xValues, y:yValues, mode:"lines"}];
+            const layout = {title: "y = " + exp};
+            Plotly.newPlot("myPlot", data, layout);
+            return false;
+        }
+        
+    </script>
+
+</body>
+
+</html>
