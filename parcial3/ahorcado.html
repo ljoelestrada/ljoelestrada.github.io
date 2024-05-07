@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <style>
+        body{
+            background-color: #333;
+            color: #f2f2f2;
+            text-align: center;
+            font-family: verdana;
+        }
+        #botones{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin: 0 40%;
+        }
+        .btns{
+            font-family: verdana;
+            background-color: #111;
+            border: 2px solid blue;
+            color: #f2f2f2;
+            height: 30px;
+            width: auto;
+        }
+        canvas{
+            border: solid 2px #f2f2f2;
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+        intento = 0;
+        function dibujar(){
+            const canvas = document.querySelector("canvas");
+            const ctx = canvas.getContext("2d");
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.arc(225, 80, 50, 0, 2 * Math.PI); // (x,y,r,d,?)
+            ctx.stroke();
+            // CUERPO
+            ctx.beginPath();
+            ctx.moveTo(225,130);
+            ctx.lineTo(225,250);
+            ctx.stroke();
+            // BRAZO IZQ
+            ctx.beginPath();
+            ctx.moveTo(225,150);
+            ctx.lineTo(160,190);
+            ctx.stroke();
+            // BRAZO DER
+            ctx.beginPath();
+            ctx.moveTo(225,150);
+            ctx.lineTo(290,190);
+            ctx.stroke();
+            // PIERNA IZQ
+            ctx.beginPath();
+            ctx.moveTo(225,250);
+            ctx.lineTo(190,320);
+            ctx.stroke();
+            // PIERNA DER
+            ctx.beginPath();
+            ctx.moveTo(225,250);
+            ctx.lineTo(260,320);
+            ctx.stroke();
+        }
+        function limpiar(){
+            const canvas = document.querySelector("canvas");
+            const ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            intento=0;
+        }
+        function monito(){
+            let palabras = ["muercielago","bandido","historia","secuestro","minijuego"];
+            let alea=Math.floor(Math.random()*(4-0+1)+0)
+            let secreta = palabras[alea];
+            let word = (document.forms[0].palabra.value);
+            const canvas = document.querySelector("canvas");
+            const ctx = canvas.getContext("2d");
+            ctx.lineWidth = 5;
+            gameover=0;
+
+            if(word==secreta){
+                document.getElementById("msg").innerHTML = "FELICIDADES, HAS GANADO";
+                intento=0;
+                alert('Felicidades Has ganado, se reiniciará el juego');
+                limpiar();
+                document.getElementById("msg").innerHTML = "";
+            }else{
+                if(intento==0){
+                    ctx.beginPath();
+                    ctx.arc(225, 80, 50, 0, 2 * Math.PI); // (x,y,r,d,?)
+                    ctx.stroke();}
+                if(intento==1){
+                    ctx.beginPath();
+                    ctx.moveTo(225,130);
+                    ctx.lineTo(225,250);
+                    ctx.stroke();}
+                if(intento==2){
+                    ctx.beginPath();
+                    ctx.moveTo(225,150);
+                    ctx.lineTo(160,190);
+                    ctx.stroke();}
+                if(intento==3){
+                    ctx.beginPath();
+                    ctx.moveTo(225,150);
+                    ctx.lineTo(290,190);
+                    ctx.stroke();}
+                if(intento==4){
+                    ctx.beginPath();
+                    ctx.moveTo(225,250);
+                    ctx.lineTo(190,320);
+                    ctx.stroke();}
+                if(intento==5){
+                    ctx.beginPath();
+                    ctx.moveTo(225,250);
+                    ctx.lineTo(260,320);
+                    ctx.stroke();
+                    gameover=1;
+                }
+                    
+                if(intento<=5){
+                    intento++;
+                }else{intento=0;}
+
+                if(gameover==1){
+                    document.getElementById("msg").innerHTML = "HAS PERDIDO";
+                    alert('Mala suerte has perdido, se reiniciará el juego');
+                    document.getElementById("msg").innerHTML = "";
+                    limpiar();
+                }
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <h1>Ahorcado</h1>
+    <p>Posibles palabras: muercielago, bandido, historia, secuestro, minijuego</p>
+    <h2 id="msg"></h2>
+    <canvas id="myCanva" width="500px" height="500px">
+        Lo sentimos, tu navegador no soporta los canva
+    </canvas>
+
+    <div id="botones">
+    <p><button class="btns" onclick="dibujar()">Dibujar</button></p>
+    <p><button class="btns" onclick="limpiar()">Limpiar</button></p>
+    </div>
+
+    <form id="myform" onsubmit="return monito();">
+
+        <p>Ingrese la palabra <input class="btns" id="word" name="palabra" type="text" /></p>
+      
+        <p><input class="btns" type="submit" /></p>
+      
+    </form>
+</body>
+</html>
