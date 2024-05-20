@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script type = "text/javascript">
+        function validar(){
+            var user= document.forms[0].usuario.value;
+            var pass= document.forms[0].password.value;
+
+            if(user=="admin" && pass=="admin"){
+                document.write("<a href='../../index.html'>Portafolio</a>");
+            }else{
+                document.write("<a href='login.html'>Regreso</a>");
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Login para portafolio</h2>
+    <p>Credenciales correctas: admin;admin</p>
+    <form id="myform" onsubmit="return validar();">
+        <p>Usuario <input id="user" name="usuario" type="text" /></p>
+        <p>Password <input id="pass" name="password" type="password" /></p>
+        <p><input type="submit"/></p>
+
+    </form>
+</body>
+</html>

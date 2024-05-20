@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <iframe frameborder="0" width="500" height="400"></iframe>
+    <script>
+        
+        var carac = prompt('Introduce un caracter: ');
+        var altura = prompt('Ingresa la altura deseada? ');
+        altura = parseInt(altura);
+
+        var doc = new jsPDF();
+        doc.setFontSize(22);
+        doc.text(20, 20, 'Caracter' + carac);
+        doc.setFontSize(16);
+        doc.text(20, 30, 'Altura: ' + altura);
+
+        for(var i = 1; i <= altura; i ++) {
+            for(let j=1;j<=i;j++){
+                doc.text(20 + (j * 10), 30 + (i*10), carac);
+            }
+        }
+
+        doc.addPage();
+        doc.setFontSize(22);
+        doc.text(20, 20, 'Caracter' + carac);
+        doc.setFontSize(16);
+        doc.text(20, 30, 'Altura: ' + altura);
+
+        for(var i = 1; i <= altura; i ++) {
+            for(let j=1;j<=i;j++){
+                doc.text(60 + (j * 10), 30 + (i*10), carac);
+            }
+        }
+        for(var i = 1; i <= altura; i ++) {
+            for(let j=1;j<i;j++){
+                doc.text(70 - (j * 10), 30 + (i*10), carac);
+            }
+        }
+        
+        var string = doc.output('datauristring');
+
+        $('iframe').attr('src', string);
+    </script>
+</body>
+</html>

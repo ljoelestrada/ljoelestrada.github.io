@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="format.js"></script>
+    <!-- Necesario para PDF -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+</head>
+<body>
+    <div id="contenido">
+        <h1>Bienvenido al Joe's Magic Coder</h1>
+        <form id="myform" onsubmit="return codificado();">
+            <p><input id="deposit" name="palabra" type="text"/></p>
+            <p><input id="btn" type="submit"/></p>
+            <h2 id="resultado"></h2>
+            <p id="word"></p>
+        </form>
+        <iframe id="frame" frameborder="0" width="800" height="400"></iframe>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype>
+<html>
+<head>
+	<title>jsPDF</title>
+
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8"; />	
+
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+
+</head>
+
+<body>
+	<iframe frameborder="0" width="800" height="400"></iframe>
+<script>
+    $(document).ready(function() {
+
+        var doc = new jsPDF();
+        let dato1=15;
+        let dato2=46;
+        let suma=dato1+dato2;
+        var texto = "El resultado de sumar: "+dato1+" y "+dato2+" es "+suma;
+
+        doc.setFontSize(20);
+        doc.text(70, 20, "Estrada López Luis Joel");
+        doc.text(75, 40, "Programación Web I");
+        doc.text(40, 60, texto);
+        //doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+        var string = doc.output('datauristring');
+
+        $('iframe').attr('src', string);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+20&display=swap');
+
+body{
+    background-color: #2b2e4b;
+    color: #f2f2f2;
+    margin: 0;
+    text-align: center;
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+#contenido{
+    margin: 5%;
+}
+#deposit{
+    background-color: #333;
+    height: 30px;
+    width: 350px;
+    color: #f2f2f2;
+    padding: 5px 10px;
+}
+#btn{
+    width: 10%;
+    height: 30px;
+    background-color: #2b2e4b;
+    color: #f2f2f2;
+    font-family: verdana;
+}
+#btn:hover{
+    border: solid 3px red;
+    height: 32px;
+}
+#word{
+    color: #f2f2f2;
+}
+iframe{
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+h2{
+    margin-top: 3%;
+}
+#word{
+    font-family: verdana;
+}
