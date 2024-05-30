@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Marcellus&family=Marko+One&family=Satisfy&display=swap');
+
+/* GENERAL*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+body{
+    margin: 0;
+    font-family: "Donegal One";
+    background-color: #f2f2f2;
+}
+/* NAV VAR */
+nav{
+    position: fixed;
+    background-color: #222;
+    color: #f2f2f2;
+    height: 100%;
+    width: 2%;
+    z-index: 10;
+    font-size: 0;
+    border-right: 5px solid #DFC76C;
+}
+nav:hover{
+    width: 15%;
+    font-size: 150%;
+    border-right: none;
+}
+nav li{
+    border: 1px solid #222;
+    padding: 5%;
+    margin: 12%;
+}
+nav li:hover{
+    border: 4px solid #f2f2f2;
+    background-color: #DFC76C;
+    color: #222;
+    font-weight: bold;
+}
+nav a{
+    color: #f2f2f2;
+}
+/* ICONO DE WHATS */
+#wts{
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 20;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    transform: scale(4);
+}
+#wts i{
+    color: green;
+}
+/* MAIN COVER */
+#cover{
+    /*background-color: blue;*/
+    background: linear-gradient(rgba(5,7,12,0.75),rgba(5,7,12,0.35)),url(media/main_coverp.jpg);
+    background-size:100%;
+    background-repeat: no-repeat;
+    /*       MEDIDAS          */
+    height: 50vh;
+    width: 100%;
+    /* CONTENIDO */
+    color: #f2f2f2;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+#texto_principal{
+    text-align: center;
+}
+#nombre{
+    font-family: "Satisfy";
+    font-weight: bold;
+    font-size: 500%;
+    color: #DFC76C;
+    margin-bottom: 0;
+    letter-spacing: 5px;
+    text-shadow: 5px 5px #333;
+}
+#nombre:hover{
+    font-size: 700%;
+    text-shadow: 5px 5px #f2f2f2;
+}
+#lema{
+    font-size: 200%;
+    margin-top: 2%;
+}
+/* RECEPCIÓN */
+#entrada{
+    /*background-color: brown;*/
+    height: 50vh;
+    width: 100%;
+    display: flex;
+}
+/* PROMOS */
+#entrada_promo{
+    /*background-color: orange;*/
+    height: 50vh;
+    width: 50%;
+    display: block;
+}
+#txtpromos{
+    /*background-color: turquoise;*/
+    height: 20%;
+    width: 100%;
+    text-align: center;
+}
+#txtpromos h3{
+    padding-top: 5%;
+    font-family: "Marko One";
+    font-weight: bold;
+    font-size: 160%;
+}
+#txtpromos hr{
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-right: 20%;
+    width: 50%;
+}
+#promociones{
+    /*background-color: yellow;*/
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* INFORMACIÓN GEN */
+#entrada_info{
+    /*background-color: purple;*/
+    height: 50vh;
+    width: 50%;
+    display: block;
+}
+#datos{
+    /*background-color: magenta;*/
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.iicon{
+    background-color: #222;
+    height: 70%;
+    width: 30%;
+    display: block;
+}
+.ico{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ico i{
+    transform: scale(7);
+    color: #DFC76C;
+}
+.ico i:hover{
+    transform: scale(6);
+}
+.ticon{
+    background-color: #DFC76C;
+    height: 20%;
+    width: 100%;
+}
+.ticon p{
+    text-align: center;
+    padding-top: 2%;
+    font-family: "Marko One";
+    font-weight: bold;
+    font-size: 140%;
+}
+/* VINCULO SERVICIOS PRINCIPAL */
+#ir_servicios{
+    /*background-color: aquamarine;*/
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+}
+#vinculo_servicios{
+    background-color: #222;
+    height: 40%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+#vinculo_servicios a{
+    background-color: #DFC76C;
+    text-align: center;
+    padding: 1%;
+    width: 90%;
+    font-family: "Marko One";
+    font-weight: bold;
+    font-size: 140%;
+    color: #222;
+}
+#vinculo_servicios a:hover{
+    width: 85%;
+}
+/* CARRUSEL */
+#cCarrusel{
+    border: 3px solid black;
+    width: 60%;
+    height: 60%;
+    justify-content: center;
+    overflow: hidden;
+}
+.iCarrusel{
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    position:relative;
+}
+.tCarrusel{
+    background-color: #DFC76C;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tCarrusel img{
+    width: 70%;
+}
+.fCarrusel{
+    background-color: rgba(1,1,1, 0);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+i{
+    color: #f2f2f2;
+}
+/* SERVICIOS */
+#servicios{
+    /*background-color: #f2f2f2;*/
+    background-image: url(media/fondo.png);
+    height: 100vh;
+    width: 100%;
+}
+#barra_s{
+    background-color: #222;
+    height: 10vh;
+    width: 100%;
+    color: #DFC76C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 250%;
+}
+#s_principales{
+    /*background-color: purple;*/
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#s_secundarios{
+    /*background-color: blue;*/
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* CUADROS SERVICIOS */
+.cuadros{
+    /*background-color: orange;*/
+    height: 80%;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.cuadro_s{ /* Cconfig. Cuadros */
+    background-color: #333;
+    height: 100%;
+    width: 20%;
+}
+.imagen_c{ /* config. Fondo img de cuadros */
+    background-color: #DFC76C; /* color al pasar el cursor*/
+    height: 80%;
+    width: 100%;
+}
+.imagen_c img{ /* config. Imagenes de cuadros */
+    height: 100%;
+    width: 100%;
+}
+.imagen_c img:hover{ /* config. Imagenes de cuadros */
+    opacity: 80%;
+}
+.etiqueta_c{ /* config. etiquetas cuadros */
+    background-color: #2c272b;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #DFC76C;
+    font-size: 150%;
+}
+hr{
+    border: 2px solid #DFC76C;
+    margin: 0 5% 0 5%;
+}
+/* SECCIONES */
+#cabello{
+    /*background-color: red;*/
+    background-image: url(media/fondo.png);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+#faciales{
+    /*background-color: blue;*/
+    background-image: url(media/fondo.png);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+#manicure{
+    /*background-color: purple;*/
+    background-image: url(media/fondo.png);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+#eventos{
+    /*background-color: orange;*/
+    background-image: url(media/fondo.png);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.texto ul,.texto_d ul{
+    margin-top: 4%;
+}
+/* GALERIA */
+#galeria{
+    /*background-color: green;*/
+    background-image: url(media/fondo.png);
+    height: 100vh;
+    width: 100%;
+    display: block;
+}
+#encabezado_galeria{
+    /*background-color: magenta;*/
+    width: 100%;
+    height: 15%;
+    display: block;
+    align-content: center;
+    text-align: center;
+    font-size: 150%;
+    font-family: "Marko One";
+}
+#galeria hr{
+    margin-top: 1%;
+}
+#galeria h3{
+    text-align: center;
+    font-size: 200%;
+    letter-spacing: 10px;
+    font-family: "Marko One";
+    color: #DFC76C;
+}
+#area_galeria{
+    /*background-color: cadetblue;*/
+    width: 100%;
+    height: 85%;
+    display: block;
+}
+#marcos{
+    /*background-color: red;*/
+    width: 90%;
+    height: 50%;
+    margin-top: 2%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.marcoG{
+    background-color: #222;
+    height: 100%;
+    width: 90%;
+    margin: 0 1%;
+    border: 5px solid #DFC76C;
+}
+.marcoG:hover{
+    border: 7px solid #222;
+}
+.imagen_M{
+    /*background-color: gold;*/
+    height: 90%;
+    display: flex;
+    justify-content: center;
+}
+.imagen_M img{
+    background-color: #333;
+    opacity: 30%;
+    width: 70%;
+    height: 100%;
+}
+.imagen_M img:hover{
+    opacity: 100%;
+}
+.etiqueta_M{
+    background-color: #DFC76C;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Marko One";
+    color: #222;
+    font-weight: bold;
+    font-size: 120%;
+}
+/* MAS GALERIA */
+.areaG{
+    /*background-color: blue;*/
+    height: 25%;
+    width: 90%;
+    margin-top: 3%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+}
+#galeriaC{
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+    opacity: 50%;
+}
+#galeriaC:hover{
+    opacity: 100%;
+    border: 5px solid #DFC76C;
+}
+#galeriaC i{
+    color: #DFC76C;
+    transform: scale(3);
+}
+#galeriaC:hover i{
+    transform: scale(4);
+}
+
+/* CAJAS DE CONTENIDO DE SECCIONES */
+.cajatxt{
+    /*background-color: greenyellow;*/
+    height: 100%;
+    width: 60%;
+    font-size: 200%;
+    display:block;
+    align-content: center;
+    text-align: center;
+    font-family: "Marko One";
+}
+.cajatxt hr{
+    margin-top: 2%;
+}
+.texto{
+    font-family: "Marcellus";
+    text-align: left;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+.texto_d{
+    font-family: "Marcellus";
+    text-align: right;
+    margin-right: 28%;
+    margin-top: 5%;
+}
+.cajaimg_w{
+    background-color: rgba(5,7,12,0.3);
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cajaimg_h{
+    background-color: rgba(5,7,12,0.3);
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cajaimg_w img{
+    width: 60%;
+}
+.cajaimg_h img{
+    height: 40%;
+}
+/* UBICACIÓN */
+#ubicacion{
+    /*background-color: aqua;*/
+    background-image: url(media/fondo.png);
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#ubicaciontxt{
+    /*background-color: orange;*/
+    height: 100%;
+    width: 50%;
+    font-size: 200%;
+    display:block;
+    align-content: center;
+    text-align: center;
+    font-family: "Marko One";
+}
+#ubicacion hr{
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#ubicaciontxt p{
+    margin-right: 45%;
+    margin-left: 0%;
+}
+#mapa{
+    /*background-color: purple;*/
+    height:100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#map{
+    width:60%;
+    height:80%;
+    background-color: #222;
+}
+
+/* FOOTER */
+#footer{
+    background-color: #222;
+    height: 20vh;
+    width: 100%;
+    color: #f2f2f2;
+    display: block;
+    text-align: center;
+}
+#footer p{
+    padding-top: 2%;
+    font-weight: bold;
+    font-size: 120%;
+}
+#redes{
+    /*background-color: aqua;*/
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* REDES */
+#redes i{
+    color: #DFC76C;
+    transform: scale(4);
+}
+#redes i:hover{
+    color: #f2f2f2;
+}
+#redes a{
+    margin-left: 2%;
+    margin-right: 2%;
+}

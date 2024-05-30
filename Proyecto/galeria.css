@@ -1,0 +1,84 @@
+/* GENERAL */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #f2f2f2;
+    background-image: url(media/fondo.png);
+    color: #f2f2f2;
+}
+a{
+    text-decoration: none;
+    margin: 50%;
+}
+li{
+    list-style: none;
+}
+/* NAV */
+nav{
+    position: fixed;
+    background-color: #222;
+    color: #f2f2f2;
+    height: 100%;
+    width: 2%;
+    z-index: 10;
+    font-size: 0;
+    border-right: 5px solid #DFC76C;
+}
+nav:hover{
+    width: 10%;
+    font-size: 150%;
+    border-right: none;
+}
+nav li{
+    border: 1px solid #222;
+    padding: 5%;
+    margin: 12%;
+}
+nav li:hover{
+    border: 4px solid #f2f2f2;
+    background-color: #DFC76C;
+    color: #222;
+    font-weight: bold;
+}
+nav a{
+    color: #f2f2f2;
+}
+/* BARRA SUP. */
+#encabezadoG{
+    background-color: #222;
+    color: #DFC76C;
+    font-family: "Marko One";
+    font-weight: bold;
+    font-size: 120%;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* DIV MARCOS */
+.contenido{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 5%;
+    margin-left: 10%;
+}
+/* PROPIEDADES DE CUADRO */
+div.gallery {
+    margin: 5px 5px 25px 5px;
+    border: 1px solid #ccc;
+    background-color: #DFC76C;
+    width: 300px;
+    border: 5px solid #DFC76C;
+}    
+div.gallery:hover {
+    border: 7px solid #222;
+}   
+div.gallery img {
+    width: 100%;
+    height: 90%;
+}
